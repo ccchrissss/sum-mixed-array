@@ -7,8 +7,15 @@ function sumMix(x) {
   // // (accumulator, current value) => accumulator + current value, initial value
   // return allNums.reduce( (a, c) => a + c, 0)
 
-  return x.reduce( (a, c) => a + +c, 0)
+  // return x.reduce( (a, c) => a + +c, 0)
 
+  let sum = 0
+      
+  for (let i = 0; i < x.length; i++) {
+    sum+= +x[i]
+  }
+  
+  return sum
 }
 
 console.log(sumMix( [1, 2, '3', '04', 5] ))
