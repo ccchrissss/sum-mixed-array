@@ -1,27 +1,30 @@
-function sumMix(x){
+function sumMix(x) {
 
-  // map over the array
-    // turn each element into a number
-  // assign this new array to a variable called allNumsArr
+  // let allNums = x.map( e => +e )
 
-  let allNumsArr = x.map( e => Number(e) )
+  // // console.log(allNums)
 
-  // console.log(allNumsArr)
-  
-  // reduce method to sum the array
-  // return this value
+  // // (accumulator, current value) => accumulator + current value, initial value
+  // return allNums.reduce( (a, c) => a + c, 0)
 
-  let sum = allNumsArr.reduce( (a, c) =>  a + c, 0 )
+  return x.reduce( (a, c) => a + +c, 0)
 
-  // console.log(sum)
-
-  return sum
 }
 
-sumMix(['1', 2, 3, 4, '5'])
+console.log(sumMix( [1, 2, '3', '04', 5] ))
+console.log(sumMix( [2, '2', '2', 2] ))
+console.log(sumMix( ['10', '11', '12'] ))
 
-// takes in an array of strings and numbers
-// should return a number
-// e.g. sumMix ( ['1', 2, 3, 4, '5'] )
-// results in 15
+// take in an array
+  // can contain strings and numbers
+// return the sum of the array, after all elements have been converted to strings
+  // the final return value should be a number
+
+// sumMix( [1, 2, '3', '04', 5] )
+// sumMix( [2, '2', '2', 2] )
+// sumMix( ['10', '11', '12'])
+
+// map over the array, converting each element to a number if its not already
+// use the reduce method to find the sum of the array of numbers
+// return the sum
 
